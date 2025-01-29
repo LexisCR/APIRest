@@ -1,3 +1,2 @@
 # Repositorio-de-Alejandro
-Nombre: Alejandro Azael Cortina Rangel
-Numero de control: 21100183
+Alejandro Azael Cortina Rangel 21100183
