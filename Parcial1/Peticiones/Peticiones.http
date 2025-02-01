@@ -1,0 +1,14 @@
+### Enviar datos
+@UrlAPI = https://jsonplaceholder.typicode.com/posts
+POST {{UrlAPI}} HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Nuevo Post",
+    "body": "Hola Mundo!",
+    "userId": 1
+}
+
+### Obtener datos del id 4
+@ID = 4
+GET {{UrlAPI}}/{{ID}} HTTP/1.1
