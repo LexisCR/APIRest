@@ -1,17 +1,41 @@
 const express=require('express');
 const app=express();
 const port=3000;
+ 
+/*Middlewawre de Aplicacion
+app.use('/',(req,res,next)=>{
+console.log("Peticion al server");
+next();
+}, (req,res,next)=>{
+    console.log("2da funcion middlewawre");
+    next();
+}
+);
+ */
 
-app.get('/', (req,res,next)=>{
-    res.header('Access-Control-Allow-Origin', '*')
+// Middleware incorporado en express
+app.use(express.json());
+app.use(express.text());
+ 
+app.get('/alumnos', (req,res,next)=>{
+    console.log(req.query);
     res.sendFile(__dirname+'/index.html');
 })
-
-app.post('/', (req, res) =>{
-    res.send('Hello world');
+ 
+app.post('/sistemas/:control', (req,res)=>{
+    console.log(req.params)
+    res.send("HOLA MUNDO");
 })
 
+app.get('/maestros', (req,res)=>{
+    console.log(req.body)
+    res.send("Hola Mundo!");
+})
+ 
+app.use('/', (req,res,next)=>{
+    res.status(404).send("Error 404");
+})
+ 
 app.listen(port,()=>{
-    console.log('Server running at http://localhost:3000');
+console.log('Server running at http://localhost:3000');
 });
-
