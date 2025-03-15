@@ -9,7 +9,11 @@
     Servidor Express Online!
 
     <script>
-        fetch("http://localhost:3001")
+        fetch("http://localhost:3001", {
+            body: {
+                
+            }
+        })
         .then(response => response.json())
         .then(data => console.log(data))
         .catch(error => console.log('Error: ', error));
