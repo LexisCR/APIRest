@@ -1,0 +1,12 @@
+{
+  "name": "ejemplomodulocr",
+  "version": "1.0.0",
+  "dependencies": {
+    "clean-jsdoc-theme": "^4.3.0",
+    "jsdoc": "^4.0.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\"",
+    "doc": "jsdoc jsdoc.json --readme ./README.MD"
+  }
+}
