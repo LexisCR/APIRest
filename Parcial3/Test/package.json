@@ -1,0 +1,13 @@
+{
+  "name": "ejemplomodulocr",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "chai": "^5.2.0",
+    "clean-jsdoc-theme": "^4.3.0",
+    "jsdoc": "^4.0.4"
+  },
+  "scripts": {
+    "test": "node --test ./test"
+  }
+}
